@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html><!-- InstanceBegin template="/Templates/sablon.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+    <meta charset="utf-8">
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>Oyun Odası</title>
+    <!-- InstanceEndEditable -->
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="resimler/oyunkonsolu.png" />
+    <!--duyuru-->
+    <script>
+        function kapat() {
+            document.getElementById("drag-div").style.display = "block";
+            document.getElementById("drag-gizle").style.display = "none";
+        }
+    </script>
+    <div class="Q-FIX FIXED-Q" id="drag-gizle"><a
+            style="text-decoration:none;position:absolute;top:3px;right:175px;z-index:4000;font-family:Calibri, sans-serif;font-weight:bold;color:#fff !important;font-size:16px;cursor:default;">Duyuru</a>
+        <style>
+            #Qdragme2 {
+                /* Genişlik: */
+                width: 350px;
+                /* Yükseklik: */
+                height: 75px;
+
+                position: relative;
+                color: #444;
+                font-size: 16px;
+                background: #F8F8F8;
+                -webkit-border-radius: 4px;
+                border-radius: 4px;
+                border-top: 26px solid #F2864E;
+                color: #444;
+                border-left: 1px solid #E8DDD5;
+                border-right: 1px solid #E8DDD5;
+                border-bottom: 1px solid #E8DDD5;
+                padding: 5px 8px;
+                background-image: linear-gradient(bottom, #EDEDED 17%, #FFFFFF 77%);
+                background-image: -o-linear-gradient(bottom, #EDEDED 17%, #FFFFFF 77%);
+                background-image: -moz-linear-gradient(bottom, #EDEDED 17%, #FFFFFF 77%);
+                background-image: -webkit-linear-gradient(bottom, #EDEDED 17%, #FFFFFF 77%);
+                background-image: -ms-linear-gradient(bottom, #EDEDED 17%, #FFFFFF 77%);
+                background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.17, #EDEDED), color-stop(0.77, #FFFFFF));
+                -moz-box-shadow: 0 0 5px #888;
+                -webkit-box-shadow: 0 0 5px#888;
+                box-shadow: 0 0 5px #888;
+            }
+
+            #drag-div {
+                display: none;
+            }
+        </style>
+        <div id="Qdragme2">
+            <center>
+                <p>Oyunlar Açılmıyorsa Ne Yapmalıyım?</p>
+                <button onfocus="this.blur();" class="Q_hace2" style="position:absolute;bottom:8px;right:90px;"
+                    onclick="kapat()">Göster</button>
+                <button onfocus="this.blur();" class="Q_hace2" style="position:absolute;bottom:8px;right:12px;"
+                    onclick="document.getElementById('drag-gizle').style.display='none';">Kapat</button>
+            </center>
+        </div>
+    </div>
+
+
+
+    <div class="Q-FIX FIXED-Q" id="drag-div"><a
+            style="text-decoration:none;position:absolute;top:3px;right:230px;z-index:4000;font-family:Calibri, sans-serif;font-weight:bold;color:#fff !important;font-size:16px;cursor:default;">Duyuru</a>
+        <style>
+            #Qdragme {
+                /* Genişlik: */
+                width: 500px;
+                /* Yükseklik: */
+                height: 280px;
+            }
+        </style>
+        <div id="Qdragme">
+            <center>
+                <img src="resimler/duyuru.jpg" alt="">
+                <p>Oyunlar açılmıyorsa yukarıdaki ekran görüntüsünde gösterilenleri uygulayabilirsiniz.</p>
+                <button onfocus="this.blur();" class="Q_hace2" style="position:absolute;bottom:8px;right:12px;"
+                    onclick="document.getElementById('drag-div').style.display='none';">Kapat</button>
+            </center>
+        </div>
+    </div>
+
+
+
+
+    <style>
+        #Qdragme {
+            position: relative;
+            color: #444;
+            font-size: 16px;
+            background: #F8F8F8;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            border-top: 26px solid #F2864E;
+            color: #444;
+            border-left: 1px solid #E8DDD5;
+            border-right: 1px solid #E8DDD5;
+            border-bottom: 1px solid #E8DDD5;
+            padding: 5px 8px;
+            background-image: linear-gradient(bottom, #EDEDED 17%, #FFFFFF 77%);
+            background-image: -o-linear-gradient(bottom, #EDEDED 17%, #FFFFFF 77%);
+            background-image: -moz-linear-gradient(bottom, #EDEDED 17%, #FFFFFF 77%);
+            background-image: -webkit-linear-gradient(bottom, #EDEDED 17%, #FFFFFF 77%);
+            background-image: -ms-linear-gradient(bottom, #EDEDED 17%, #FFFFFF 77%);
+            background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.17, #EDEDED), color-stop(0.77, #FFFFFF));
+            -moz-box-shadow: 0 0 5px #888;
+            -webkit-box-shadow: 0 0 5px#888;
+            box-shadow: 0 0 5px #888;
+        }
+
+        .Q_hace2 {
+            cursor: pointer;
+            padding: 2px 16px 3px 16px;
+            font-family: "Lucida Grande", tahoma, verdana, arial, sans-serif;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: bold;
+            text-transform: normal;
+            letter-spacing: normal;
+            line-height: 16px;
+            color: #F2864E;
+            border: none;
+            outline: 1px solid #999999;
+            border-top: 1px solid #ffffff;
+            background: #f2f2f2 url('http://s-static.ak.fbcdn.net/rsrc.php/v2/yM/r/QvWFehnkoZF.png') no-repeat scroll -352px -201px;
+        }
+
+        .Q_hace2:active {
+            cursor: pointer;
+            border-top: 1px solid #dddddd !important;
+            background: #dddddd !important;
+            background-image: none !important;
+        }
+
+        /* http://www.Q.com/2012/08/facebook-tarz-dugme-kodlar-sadece-burada.html */
+        .Q_hace2:hover {
+            cursor: pointer;
+        }
+
+        div.Q-FIX {
+            line-height: 19px;
+            position: fixed;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        div.FIXED-Q {
+            top: 25px;
+            right: 25px;
+        }
+
+        div.Q-FIX {
+            _position: absolute;
+        }
+
+        div.FIXED-Q {
+            _bottom: auto;
+            _top: expression(ie6=(document.documentElement.scrollTop+document.documentElement.clientHeight - 52+"px"));
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+    <div class="center">
+        <!-- InstanceBeginEditable name="icerik" -->
+
+
+
+
+        <div class="icerik">
+
+            <br>
+            <div class="baslik"> <span>Oyunlar</span> </div>
+
+            <div class="oyun-siralama">
+
+                <div class="oyun1">
+
+                    <div class="oyun-resim"> <a href="oyun/armor-mayhem.html"> <img src="resimler/armormayhem.jpg"
+                                alt=""> </a> </div>
+
+                    <div class="oyun-ismi">
+
+                        <span> <a href="oyun/armor-mayhem.html"> Armor Mayhem </a> </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="oyun1">
+
+                    <div class="oyun-resim"> <a href="oyun/saldiri-timi.html"> <img src="resimler/saldiritimi.jpg"
+                                alt=""> </a> </div>
+
+                    <div class="oyun-ismi">
+
+                        <span> <a href="oyun/saldiri-timi.html"> Saldırı Timi </a> </span>
+
+                    </div>
+
+                </div>
+
+                <div class="oyun1">
+
+                    <div class="oyun-resim"> <a href="oyun/bilgisayari-parcala.html"> <img
+                                src="resimler/bilgisayariparcala.jpg" alt=""> </a> </div>
+
+                    <div class="oyun-ismi">
+
+                        <span> <a href="oyun/bilgisayari-parcala.html"> Bilgisayarı Parçala </a> </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="oyun1">
+
+                    <div class="oyun-resim"> <a href="oyun/tras-et-beni.html"> <img src="resimler/trasetbeni.jpg"
+                                alt=""> </a> </div>
+
+                    <div class="oyun-ismi">
+
+                        <span> <a href="oyun/tras-et-beni.html"> Traş Et Beni </a> </span>
+
+                    </div>
+
+                </div>
+
+                <div class="oyun1">
+
+                    <div class="oyun-resim"> <a href="oyun/basketbol.html"> <img src="resimler/basketbol.jpg" alt="">
+                        </a> </div>
+
+                    <div class="oyun-ismi">
+
+                        <span> <a href="oyun/basketbol.html"> Basketbol </a> </span>
+
+                    </div>
+
+                </div>
+
+                <div class="oyun1">
+
+                    <div class="oyun-resim"> <a href="oyun/kucuk-adam.html"> <img src="resimler/kucukadam.jpg" alt="">
+                        </a> </div>
+
+                    <div class="oyun-ismi">
+
+                        <span> <a href="oyun/kucuk-adam.html"> Küçük Adam </a> </span>
+
+                    </div>
+
+                </div>
+
+                <div class="oyun1">
+
+                    <div class="oyun-resim"> <a href="oyun/maymunu-tokatla.html"> <img src="resimler/maymunutokatla.jpg"
+                                alt=""> </a> </div>
+
+                    <div class="oyun-ismi">
+
+                        <span> <a href="oyun/maymunu-tokatla.html"> Maymunu Tokatla </a> </span>
+
+                    </div>
+
+                </div>
+
+                <div class="oyun1">
+
+                    <div class="oyun-resim"> <a href="oyun/blok-beceri.html"> <img src="resimler/blokbeceri.jpg" alt="">
+                        </a> </div>
+
+                    <div class="oyun-ismi">
+
+                        <span> <a href="oyun/blok-beceri.html"> Blok Beceri </a> </span>
+
+                    </div>
+
+                </div>
+
+                <div class="oyun1">
+
+                    <div class="oyun-resim"> <a href="oyun/kirmizi-top.html"> <img src="resimler/kirmizitop.jpg" alt="">
+                        </a> </div>
+
+                    <div class="oyun-ismi">
+
+                        <span> <a href="oyun/kirmizi-top.html"> Kırmızı Top </a> </span>
+
+                    </div>
+
+                </div>
+
+                <div class="oyun1">
+
+                    <div class="oyun-resim"> <a href="oyun/top-sektirme.html"> <img src="resimler/topsektirme.jpg"
+                                alt=""> </a> </div>
+
+                    <div class="oyun-ismi">
+
+                        <span> <a href="oyun/top-sektirme.html"> Top Sektirme </a> </span>
+
+                    </div>
+
+                </div>
+
+                <div class="oyun1">
+
+                    <div class="oyun-resim"> <a href="oyun/satranc.html"> <img src="resimler/satranc.jpg" alt=""> </a>
+                    </div>
+
+                    <div class="oyun-ismi">
+
+                        <span> <a href="oyun/satranc.html">Satranç</a> </span>
+
+                    </div>
+
+                </div>
+
+                <div class="oyun1">
+
+                    <div class="oyun-resim"> <a href="oyun/jenga.html"> <img src="resimler/jenga.jpg" alt=""> </a>
+                    </div>
+
+                    <div class="oyun-ismi">
+
+                        <span> <a href="oyun/jenga.html">Jenga</a> </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="oyun1">
+
+                    <div class="oyun-resim"> <a href="oyun/hazine-avcisi.html"> <img src="resimler/hazineavcisi.jpg"
+                                alt=""> </a> </div>
+
+                    <div class="oyun-ismi">
+
+                        <span> <a href="oyun/hazine-avcisi.html">Hazine Avcısı</a> </span>
+
+                    </div>
+
+                </div>
+
+                <div class="oyun1">
+
+                    <div class="oyun-resim"> <a href="oyun/uzaya-dogru.html"> <img src="resimler/uzayadogru.jpg" alt="">
+                        </a> </div>
+
+                    <div class="oyun-ismi">
+
+                        <span> <a href="oyun/uzaya-dogru.html">Uzaya Doğru</a> </span>
+
+                    </div>
+
+                </div>
+
+                <div class="oyun1">
+
+                    <div class="oyun-resim"> <a href="oyun/balon-meydani.html"> <img src="resimler/balonmeydani.jpg"
+                                alt=""> </a> </div>
+
+                    <div class="oyun-ismi">
+
+                        <span> <a href="oyun/balon-meydani.html">Balon Meydanı</a> </span>
+
+                    </div>
+
+                </div>
+
+                <div class="oyun1">
+
+                    <div class="oyun-resim"> <a href="oyun/street-fighter.html" target="_blank"> <img
+                                src="resimler/streetfighter.jpg" alt=""> </a> </div>
+
+                    <div class="oyun-ismi">
+
+                        <span> <a href="oyun/street-fighter.html" target="_blank">Street Fighter</a> </span>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+
+        <!-- InstanceEndEditable -->
+        <div class="icerik">
+            <div class="oyun-siralama sayfalar">
+                <p><a href="oyun-odasi.html">1</a>
+                    <a href="oyun-odasi-2.html">2</a>
+                    <a href="oyun-odasi-3.html">3</a>
+                    <a href="oyun-odasi-4.html">4</a>
+                    <a style="background: #ff6600 !important;" href="oyun-odasi-5.html">5</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+
+        <div class="center">
+
+            <div id="alt-sol">
+                <div>ozanmert.webpanosu.net &copy; 2018</div>
+            </div>
+            <div id="alt-sag">
+                <div>Ozan Mert Akdiken</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+<!-- InstanceEnd -->
+
+</html>

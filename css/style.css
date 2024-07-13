@@ -1,0 +1,70 @@
+html,
+button,
+input,
+select,
+textarea {color: #222;}
+
+body {font-size: 1em; line-height: 1.4; background: #191b1c url("../resimler/body-bg.png") no-repeat;}
+
+::selection {color: #fff; background: #598ede; text-shadow: none;}
+::-moz-selection {color: #fff; background: #598ede; text-shadow: none;}
+
+img {vertical-align: middle;}
+textarea {resize: vertical;}
+
+.chromeframe {margin: 0.2em 0; background: #ddd; color: #000; padding: 0.2em 0;}
+
+.center { width: 990px; margin:0 auto;}
+
+/* Nav
+   ----------------------------------*/
+nav { width: 100%; height: 50px; background: url("../resimler/menu-bg.png") repeat-x; float:left; border-radius: 5px; margin:0 0 30px 0;}
+nav ul { margin:0; padding: 0;}
+nav ul li { line-height: 50px; margin:0;}
+nav ul li a { display: block; padding: 0 10px; text-decoration: none; color:#000; font-weight: 700; font-size: 15px; font-family: tahoma;border-radius: 5px;text-align:center;transition:500ms all;}
+nav ul li a:hover { background: #c7ad00;}
+
+/* Content
+   ----------------------------------*/
+.icerik { width: 986px; height: auto; float:left;}
+.icerik .baslik { width: 990px; height: 30px; float:left;}
+.icerik .baslik span { color:#fff; font-size: 14px; font-family: tahoma; font-weight: 700}
+
+.icerik .oyun-siralama { width: 988px; background: #323232; float:left; border:1px solid #474747; border-radius: 4px; margin: 0 0 15px 0; padding: 0 0 15px 0 }
+.icerik .oyun-siralama .oyun1 { width:206px; height: 180px; float:left; margin:18px 16px 0 15px; background: #fff; border-radius: 5px; padding: 10px 0 0 10px}
+.icerik .oyun-siralama .oyun1 .oyun-resim { float:left;}
+.icerik .oyun-siralama .oyun1 .oyun-ismi { }
+.icerik .oyun-siralama .oyun1 .oyun-ismi span a {display:inline-block; margin-top:5px;width: 195px; height: 25px;background: #e5c90d; border-radius: 3px; font-size: 11px;font-family: tahoma;line-height: 25px; color:#000; font-weight: 700;text-decoration: none;text-align:center;}
+.icerik .oyun-siralama .oyun1 .oyun-ismi span a:hover { text-decoration: underline;}
+.sayfalar a{
+	display:inline-block;margin-top: 15px; width: 80px;text-align: center;background: #e5c90d;border-radius: 3px; font-size: 15px;line-height: 30px; color:#000; font-weight: 700;text-decoration: none;
+}
+.sayfalar a:hover{
+	background: #c7ad00;
+}
+
+.sayfalar p{text-align:center;margin: 0;padding: 0;}
+
+/* Footer
+   ----------------------------------*/
+#footer { width: 100%; float:left; background: url("../resimler/header-ust.png") repeat-x; margin:100px 0 0 0;color:#fff;line-height:41px;font-size:15px;}
+#alt-sol{
+	width:50%;
+	float:left;
+}
+#alt-sag{
+	width:50%;
+	float:right;
+	text-align:right;
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+.hidden {display: none !important; visibility: hidden;}
+
+.invisible {visibility: hidden;}
+
+.clearfix:before,
+.clearfix:after {content: " "; display: table;}
+.clearfix:after {clear: both;}
+.clearfix {*zoom: 1;}
